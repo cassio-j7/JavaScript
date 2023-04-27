@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(113, 113, 194);
+    width: auto;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+.container{
+    max-width: 640px;
+    margin:100px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tarefas{
+    margin-left: 30px;
+}

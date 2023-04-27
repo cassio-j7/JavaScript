@@ -1,6 +1,7 @@
 //capturar evento de submit do formulario
 const form = document.querySelector('#formulario');
 
+
 form.addEventListener('submit', function (e){
     e.preventDefault();
 
@@ -30,7 +31,7 @@ form.addEventListener('submit', function (e){
 });
 
 function getNivelImc(imc){
-    const nivel = ['Abaxio do peso', 'Peso noraml', 'Sobrepeso', 'Obesidade grau I', 'Obesidade grau II', 'Obesidade grau III'];
+    const nivel = ['Abaxio do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau I', 'Obesidade grau II', 'Obesidade grau III'];
 
     //boa pratica em JS: quanto a codição for muito pequena, custama-se colocar os if em mesma linha. com o return sem chaves.
     if (imc > 39.9) return nivel[5];
@@ -62,6 +63,13 @@ function setResultado(msg, isValid){
     resultado.innerHTML = '';
 
     const p = criaP();
+
+    if(isValid){
+         p.classList.add('paragrafo-resultado');
+    }
+    else{
+        p.classList.add('bad');
+    }
     p.innerHTML = msg;
     resultado.appendChild(p);
 }
